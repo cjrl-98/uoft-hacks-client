@@ -1,0 +1,195 @@
+.header {
+  z-index: 1000;
+  position: fixed;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: #707070;
+  margin-top: 30px;
+}
+
+.header article {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header .header__logo-container {
+  margin-left: 110px;
+}
+
+.header .header__logo-container .header__logo {
+  position: relative;
+  font-size: 31px;
+  font-weight: 900;
+  margin: 0;
+}
+
+.header .header__logo-container .header__logo::after {
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  content: '';
+  width: 60px;
+  height: 5px;
+  background-color: #19D6D8;
+}
+
+.header .header__nav {
+  font-size: 21px;
+  font-weight: 500;
+  padding-left: 110px;
+}
+
+.header .header__nav-item {
+  margin-right: 34px;
+}
+
+.header .header__btn--container {
+  margin-right: 36px;
+}
+
+.header .header__btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 115px;
+  height: 40px;
+  font-size: 17px;
+  background-color: #00D6D8;
+  border: none;
+  border-radius: 118px;
+}
+
+.header .header__btn--signin {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 115px;
+  height: 40px;
+  font-size: 17px;
+  border-radius: 118px;
+  background-color: transparent;
+  border: 3px solid #00D6D8;
+}
+
+.header .header__btn--signup {
+  margin-left: 16px;
+  color: #FFFFFF;
+}
+
+.header .header__btn--upload {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 200px;
+  height: 50px;
+  font-size: 17px;
+  border-radius: 118px;
+  background-color: #00D6D8;
+  border: 3px solid #00D6D8;
+  font-size: 18px;
+  font-weight: 500;
+  color: #FFFFFF;
+}
+
+.header .header__upload-icon {
+  width: 28px;
+  height: 25px;
+  margin-right: 5px;
+}
+
+.ant-modal-content {
+  border-radius: 25px;
+}
+
+.login-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 24px 26px;
+}
+
+.login__subheading {
+  width: 100%;
+  text-align: left;
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.login-form-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 335px;
+  height: 56px;
+  background-color: #00D6D8;
+  border: none;
+  border-radius: 118px;
+  color: #ffffff;
+}
+
+.header__btn--signout {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 45px;
+  height: 45px;
+  background-color: #00D6D8;
+  border: none;
+  border-radius: 118px;
+  color: #ffffff;
+  margin-left: 16px;
+}
+
+.ant-form-item input {
+  border-radius: 220px;
+}
+/*# sourceMappingURL=Header.css.map */

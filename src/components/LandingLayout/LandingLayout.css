@@ -1,0 +1,60 @@
+.main {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main__background-object {
+  z-index: -99;
+  position: fixed;
+  top: 0;
+  right: -80px;
+}
+
+.main__landing-girl {
+  position: absolute;
+  right: 250px;
+  height: 500px;
+}
+
+.main__text-container {
+  margin-left: 110px;
+}
+
+.main__text-sub-heading {
+  font-size: 76px;
+  font-weight: 700;
+  margin-bottom: 36px;
+  line-height: 93px;
+}
+
+.main__text-sub-heading span {
+  border-bottom: 8px solid #19D6D8;
+  margin: none;
+}
+
+.main__text-paragraph {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 25px;
+  margin: none;
+}
+
+.main__btn-startnow {
+  width: 175px;
+  height: 40px;
+  background-color: #19D6D8;
+  border-radius: 118px;
+  font-size: 17px;
+  font-weight: 500;
+  color: #ffffff;
+  margin-top: 18px;
+  border: none;
+}
+/*# sourceMappingURL=LandingLayout.css.map */

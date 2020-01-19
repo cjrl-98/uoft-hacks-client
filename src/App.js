@@ -1,24 +1,17 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {useState, useContext} from 'react';
+import Header from './components/Header/Header';
+import LandingLayout from './components/LandingLayout/LandingLayout';
+import MatcherLayout from './components/MatcherLayout/MatcherLayout';
+import {AuthContext} from './firebase/AuthContext';
+import './global-styles/global.scss'
 
 function App() {
+  const [page, setPage] = useState('home');
+  const currentUser = useContext(AuthContext);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header setPage={setPage}/>
+      {page === 'home' ? <LandingLayout/> : <MatcherLayout/>} 
     </div>
   );
 }
