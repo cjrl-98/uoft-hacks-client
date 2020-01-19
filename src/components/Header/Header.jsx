@@ -23,6 +23,7 @@ export default function Header(props){
      const [isAuthLoginModal, setIsAuthLoginModal] = useState(false);
      const [isAuthRegisterModal, setIsAuthRegisterModal] = useState(false);
      const [isUploadModal, setIsUploadModal] = useState(false);
+     const [isResources, setIsResources] = useState(false);
 
      const authLoginModal = {
           visible : isAuthLoginModal,
@@ -55,6 +56,7 @@ export default function Header(props){
           setIsAuthLoginModal(false);
           setIsAuthRegisterModal(false);
           setIsUploadModal(false);
+          setIsResources(false);
      }
 
      return(
@@ -66,9 +68,7 @@ export default function Header(props){
                     <article className="header__nav">
                          <p className="header__nav-item" onClick={()=>props.setPage('home')}>Home</p>
                          <p className="header__nav-item" onClick={()=>props.setPage('match')}>Match</p>
-                         <p className="header__nav-item" onClick={()=>props.setPage('report')}>Report</p>
-                         <p className="header__nav-item" onClick={()=>props.setPage('shop')}>Collection</p>
-                         <p className="header__nav-item" onClick={()=>props.setPage('about')}>About</p>
+                         <p className="header__nav-item" onClick={()=>setIsResources(!isResources)}>Resources</p>
                     </article>
                     <article className="header__btn--container">
                          {    !currentUser ? 
@@ -95,6 +95,21 @@ export default function Header(props){
                </Modal>
                <Modal {...uploadModalOptions}> 
                     <UploadPicture/> 
+               </Modal>
+               <Modal
+                    title="Fabrical Resources"
+                    visible={isResources}
+                    footer={null}
+                    onCancel={handleCancel}
+               >
+                    <div style={{display: "flex", flexDirection: "column"}}>
+                         <a href={`https://directory.goodonyou.eco/`} target="_blank" rel="noopener noreferrer"><button style={{fontSize: "24px", fontWeight: "900"  }}>Good on You</button></a>
+                         <p style={{marginLeft: "10px"}}>Fashion Without Harm – Trusted ethical ratings in the palm of your hand.</p>
+                         <a href={`https://baptistworldaid.org.au/resources/2019-ethical-fashion-guide/ `} target="_blank" rel="noopener noreferrer"><button style={{fontSize: "24px", fontWeight: "900", marginTop: "16px"}}>BaptistWorld</button></a>
+                         <p style={{marginLeft: "10px"}}>Baptist World Aid is a Christian charity organisation based in Australia, helping to dramatically reduce poverty in communities around the world.</p>
+                         <a href={`https://msi.higg.org/sac-materials/1/textiles?`} target="_blank" rel="noopener noreferrer" ><button style={{fontSize: "24px", fontWeight: "900", marginTop: "16px"}}>Higg MSI</button></a>
+                         <p style={{marginLeft: "10px"}}>The SAC's Higg Materials Sustainability Index (Higg MSI) is the apparel industry's most trusted tool to accurately measure the environmental sustainability</p>
+                    </div>
                </Modal>
           </>
      );

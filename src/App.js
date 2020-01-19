@@ -11,7 +11,7 @@ function App() {
   return (
     <div className="App">
       <Header setPage={setPage}/>
-      {page === 'home' ? <LandingLayout/> : <MatcherLayout/>} 
+      {page === 'home' ? <LandingLayout setPage={setPage}/> : <MatcherLayout/>} 
     </div>
   );
 }

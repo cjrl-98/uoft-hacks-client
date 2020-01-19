@@ -14,7 +14,7 @@ const btnVariants = {
      }
 }
 
-export default function LandingLayout() {
+export default function LandingLayout(props) {
      return(
           <>
                <main className="main">
@@ -23,7 +23,7 @@ export default function LandingLayout() {
                     <article className="main__text-container">
                          <h2 className="main__text-sub-heading">Always Look <br/><span>Amazing</span></h2>
                          <p className="main__text-paragraph">Find the perfect outfit, learn about sustainable <br/>alternatives and help the planet.</p>
-                         <motion.button {...btnVariants} className="main__btn-startnow">Start Now</motion.button>
+                         <motion.button {...btnVariants} className="main__btn-startnow" onClick={()=>{props.setPage('match')}}>Start Now</motion.button>
                     </article>
                </main>
           </>
